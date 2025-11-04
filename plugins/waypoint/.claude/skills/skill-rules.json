@@ -1,0 +1,373 @@
+{
+    "version": "1.0",
+    "description": "Skill activation triggers for Claude Code. Controls when skills automatically suggest or block actions.",
+    "skills": {
+        "skill-developer": {
+            "type": "domain",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Meta-skill for creating and managing Claude Code skills with memory patterns",
+            "promptTriggers": {
+                "keywords": [
+                    "skill system",
+                    "create skill",
+                    "add skill",
+                    "skill triggers",
+                    "skill rules",
+                    "hook system",
+                    "skill development",
+                    "skill-rules.json",
+                    "progressive disclosure",
+                    "500-line rule",
+                    "guardrail",
+                    "enforcement level",
+                    "memory pattern",
+                    "context persistence",
+                    "plan approval",
+                    "session state",
+                    "UserPromptSubmit",
+                    "PreToolUse",
+                    "Stop hook",
+                    "skill activation",
+                    "skill debugging",
+                    "YAML frontmatter"
+                ],
+                "intentPatterns": [
+                    "(how do|how does|explain).*?skill",
+                    "(create|add|modify|build).*?skill",
+                    "skill.*?(work|trigger|activate|system)",
+                    "(debug|troubleshoot|fix).*?(skill|trigger|activation)",
+                    "skill.*?(not|won't|isn't|doesn't).*?(trigger|work|activate)",
+                    "(why|when).*?skill.*?(trigger|activate|suggest)",
+                    "(implement|add|create).*?(memory|persistence|context).*?pattern",
+                    "(how to|how do|best practice).*?(remember|persist|track).*?(preference|context)",
+                    "(plan|propose).*?(skill|feature|workflow)"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    ".claude/skills/**/*.md",
+                    ".claude/skills/skill-rules.json",
+                    ".claude/hooks/*skill*.ts",
+                    ".claude/hooks/*skill*.sh"
+                ],
+                "pathExclusions": [
+                    ".claude/skills/README.md",
+                    ".claude/skills/**/node_modules/**"
+                ],
+                "contentPatterns": [
+                    "---\\s*name:",
+                    "\"type\":\\s*\"(guardrail|domain)\"",
+                    "promptTriggers|fileTriggers",
+                    "enforcement\":\\s*\"(block|suggest|warn)\""
+                ]
+            }
+        },
+        "backend-dev-guidelines": {
+            "type": "domain",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Backend development patterns for Supabase Edge Functions + PostgreSQL + TypeScript",
+            "scaffold": {
+                "isTemplate": true,
+                "techStack": ["Supabase", "Edge Functions", "PostgreSQL", "Deno", "TypeScript", "Resend", "Stripe"],
+                "customizationRequired": false,
+                "customizationAgent": "scaffold-customizer"
+            },
+            "promptTriggers": {
+                "keywords": [
+                    "backend",
+                    "supabase",
+                    "edge function",
+                    "edge functions",
+                    "database",
+                    "PostgreSQL",
+                    "postgres",
+                    "row-level security",
+                    "RLS",
+                    "auth",
+                    "authentication",
+                    "supabase auth",
+                    "storage",
+                    "supabase storage",
+                    "realtime",
+                    "supabase realtime",
+                    "resend",
+                    "email",
+                    "transactional email",
+                    "stripe",
+                    "payments",
+                    "subscription",
+                    "API",
+                    "endpoint",
+                    "validation",
+                    "Zod"
+                ],
+                "intentPatterns": [
+                    "(create|add|implement|build).*?(edge function|function|API|endpoint)",
+                    "(setup|configure|add).*?(supabase|database|auth|storage)",
+                    "(implement|add).*?(RLS|row.*?level.*?security|policy|policies)",
+                    "(send|create).*?(email|transactional email)",
+                    "(integrate|add|implement).*?(stripe|payment|subscription)",
+                    "(fix|handle|debug).*?(error|exception|backend)",
+                    "(how to|best practice).*?(supabase|edge function|database|RLS)"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    "supabase/functions/**/*.ts",
+                    "supabase/**/*.sql",
+                    "app/api/**/*.ts",
+                    "lib/supabase/**/*.ts",
+                    "lib/database/**/*.ts",
+                    "utils/supabase/**/*.ts"
+                ],
+                "pathExclusions": [
+                    "**/*.test.ts",
+                    "**/*.spec.ts"
+                ],
+                "contentPatterns": [
+                    "from.*supabase",
+                    "createClient",
+                    "supabaseClient",
+                    "edge-runtime",
+                    "@supabase/supabase-js",
+                    "Resend",
+                    "Stripe"
+                ]
+            }
+        },
+        "memory-management": {
+            "type": "domain",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Context tracking and decision logging patterns for intentional memory management",
+            "promptTriggers": {
+                "keywords": [
+                    "remember",
+                    "memory",
+                    "track decision",
+                    "context",
+                    "preference",
+                    "store context",
+                    "save decision",
+                    "learn preference",
+                    "correction",
+                    "user preference",
+                    "persist context",
+                    "memory management",
+                    "context tracking"
+                ],
+                "intentPatterns": [
+                    "(track|remember|save|store|persist).*?(decision|context|preference|choice)",
+                    "(learn|track).*?(from correction|from feedback|preference)",
+                    "(how to|best practice).*?(remember|persist|track).*?(context|preference)",
+                    "remember.*?(this|my preference|that)",
+                    "(clear|show|view|export).*?memory"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    ".claude/memory/**/*.json",
+                    "plans/**/*-context.md",
+                    "plans/**/*-plan.md"
+                ],
+                "contentPatterns": [
+                    "\"preferences\":",
+                    "\"decisions\":",
+                    "\"corrections\":",
+                    "\"learned_patterns\":"
+                ]
+            }
+        },
+        "context-persistence": {
+            "type": "domain",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Waypoint plans methodology and session survival patterns for long-running features",
+            "promptTriggers": {
+                "keywords": [
+                    "waypoint",
+                    "waypoint plan",
+                    "waypoint plans",
+                    "session survival",
+                    "context reset",
+                    "resume work",
+                    "continue work",
+                    "progress tracking",
+                    "task handoff",
+                    "session progress",
+                    "quick resume",
+                    "three-file structure"
+                ],
+                "intentPatterns": [
+                    "(resume|continue|restore).*?(work|session|context|task)",
+                    "(create|update).*?(waypoint|plan|context|progress)",
+                    "(how to|best practice).*?(resume|survive|persist).*?(session|context)",
+                    "track.*?(progress|task|implementation)",
+                    "context.*?(reset|lost|stale)"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    "plans/active/**/*-context.md",
+                    "plans/active/**/*-plan.md",
+                    "plans/active/**/*-tasks.md"
+                ],
+                "contentPatterns": [
+                    "## SESSION PROGRESS",
+                    "### ✅ COMPLETED",
+                    "### 🟡 IN PROGRESS",
+                    "### ⏳ PENDING",
+                    "### 🎯 NEXT ACTION",
+                    "## QUICK RESUME"
+                ]
+            }
+        },
+        "plan-approval": {
+            "type": "domain",
+            "enforcement": "suggest",
+            "priority": "high",
+            "description": "Plan-approval workflow patterns for user control over AI actions in Claude Code Waypoint Plugin",
+            "promptTriggers": {
+                "keywords": [
+                    "plan",
+                    "approve",
+                    "approval",
+                    "propose",
+                    "review plan",
+                    "create plan",
+                    "plan approval",
+                    "user control",
+                    "confirm",
+                    "confirmation",
+                    "before proceeding",
+                    "check with me",
+                    "ask first"
+                ],
+                "intentPatterns": [
+                    "(create|generate|make|draft).*?plan",
+                    "(review|approve|confirm).*?plan",
+                    "(need|require|want).*?(approval|confirmation)",
+                    "(show me|let me see).*?(plan|approach|proposal).*?before",
+                    "(complex|risky|breaking).*?(change|operation)",
+                    "don't (just|immediately).*?(do|implement|execute)"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    ".claude/memory/plans/**/*.json",
+                    "plans/active/**/*-plan.md"
+                ],
+                "contentPatterns": [
+                    "## Approval",
+                    "Reply with.*approve",
+                    "\"status\".*\"(proposed|approved|rejected)\"",
+                    "\"plan_id\":",
+                    "## Risks & Mitigations",
+                    "## Breaking Changes"
+                ]
+            }
+        },
+        "frontend-dev-guidelines": {
+            "type": "guardrail",
+            "enforcement": "block",
+            "priority": "critical",
+            "description": "Frontend best practices for Next.js + React 19 + shadcn/ui + Tailwind CSS",
+            "scaffold": {
+                "isTemplate": true,
+                "techStack": ["Next.js", "React 19", "shadcn/ui", "Tailwind CSS", "TypeScript"],
+                "customizationRequired": false,
+                "customizationAgent": "scaffold-customizer"
+            },
+            "promptTriggers": {
+                "keywords": [
+                    "frontend",
+                    "nextjs",
+                    "next.js",
+                    "react",
+                    "component",
+                    "page",
+                    "app router",
+                    "server component",
+                    "client component",
+                    "server action",
+                    "shadcn",
+                    "shadcn/ui",
+                    "tailwind",
+                    "tailwindcss",
+                    "UI",
+                    "interface",
+                    "modal",
+                    "dialog",
+                    "form",
+                    "react hook form",
+                    "styling",
+                    "layout",
+                    "supabase client"
+                ],
+                "intentPatterns": [
+                    "(create|add|make|build|update|modify).*?(component|page|layout|route)",
+                    "(create|add|implement).*?(server component|client component|server action)",
+                    "(how to|best practice).*?(nextjs|react|shadcn|tailwind)",
+                    "(style|design|layout).*?(component|UI|page)",
+                    "(setup|integrate|add).*?(supabase.*?client|form|validation)"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    "app/**/*.tsx",
+                    "app/**/*.ts",
+                    "components/**/*.tsx",
+                    "lib/**/*.ts",
+                    "hooks/**/*.ts"
+                ],
+                "pathExclusions": [
+                    "**/*.test.tsx",
+                    "**/*.test.ts",
+                    "**/*.spec.tsx",
+                    "**/*.spec.ts",
+                    "**/next.config.js",
+                    "**/tailwind.config.ts",
+                    "**/tsconfig.json"
+                ],
+                "contentPatterns": [
+                    "'use client'",
+                    "'use server'",
+                    "from 'next/",
+                    "shadcn|@radix-ui",
+                    "className.*cn\\(",
+                    "useFormStatus",
+                    "createClient.*supabase",
+                    "async function.*\\(\\).*FormData"
+                ]
+            },
+            "blockMessage": "⚠️ BLOCKED - Frontend Best Practices Required\n\n📋 REQUIRED ACTION:\n1. Use Skill tool: 'frontend-dev-guidelines'\n2. Review Next.js patterns (Server vs. Client Components, Server Actions)\n3. Check shadcn/ui component usage and Tailwind CSS patterns\n4. Verify React 19 best practices\n5. Ensure TypeScript types are correct\n6. Then retry this edit\n\nReason: Enforce Next.js + React 19 + shadcn/ui best practices\nFile: {file_path}\n\n💡 TIP: Add '// @skip-validation' comment to skip future checks",
+            "skipConditions": {
+                "sessionSkillUsed": true,
+                "fileMarkers": [
+                    "@skip-validation"
+                ],
+                "envOverride": "SKIP_FRONTEND_GUIDELINES"
+            }
+        }
+    },
+    "notes": {
+        "enforcement_types": {
+            "suggest": "Skill suggestion appears but doesn't block execution",
+            "block": "Requires skill to be used before proceeding (guardrail)",
+            "warn": "Shows warning but allows proceeding"
+        },
+        "priority_levels": {
+            "critical": "Highest - Always trigger when matched",
+            "high": "Important - Trigger for most matches",
+            "medium": "Moderate - Trigger for clear matches",
+            "low": "Optional - Trigger only for explicit matches"
+        },
+        "customization": {
+            "pathPatterns": "Adjust to match your project structure (blog-api, auth-service, etc.)",
+            "keywords": "Add domain-specific terms relevant to your project",
+            "intentPatterns": "Use regex for flexible user intent matching"
+        }
+    }
+}

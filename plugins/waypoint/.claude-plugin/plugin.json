@@ -1,0 +1,78 @@
+{
+  "name": "waypoint",
+  "displayName": "Claude Code Waypoint",
+  "description": "Intentional context management and persistent memory for AI-assisted projects",
+  "version": "1.0.0",
+  "author": {
+    "name": "Daniel Bejarano",
+    "url": "https://github.com/DojoCodingLabs"
+  },
+  "publisher": "dojo-coding-labs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DojoCodingLabs/dojo-claude-code-plugin-marketplace"
+  },
+  "homepage": "https://github.com/DojoCodingLabs/dojo-claude-code-plugin-marketplace/tree/main/plugins/waypoint",
+  "bugs": {
+    "url": "https://github.com/DojoCodingLabs/dojo-claude-code-plugin-marketplace/issues"
+  },
+  "keywords": [
+    "memory",
+    "context",
+    "persistence",
+    "planning",
+    "waypoints",
+    "claude-code",
+    "ai-assistant",
+    "productivity"
+  ],
+  "license": "MIT",
+  "engines": {
+    "claude-code": ">=1.0.0"
+  },
+  "categories": [
+    "Productivity",
+    "AI Tools",
+    "Development"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "/create-plan",
+        "description": "Create new waypoint (3-file structure)"
+      },
+      {
+        "command": "/update-context",
+        "description": "Update waypoint before context reset"
+      },
+      {
+        "command": "/resume",
+        "description": "Resume from existing waypoint"
+      }
+    ],
+    "skills": [
+      "memory-management",
+      "context-persistence",
+      "plan-approval",
+      "frontend-dev-guidelines",
+      "backend-dev-guidelines",
+      "skill-developer"
+    ],
+    "agents": [
+      "scaffold-customizer",
+      "documentation-architect",
+      "code-architecture-reviewer",
+      "refactor-planner",
+      "plan-reviewer",
+      "web-research-specialist"
+    ],
+    "hooks": {
+      "UserPromptSubmit": [
+        ".claude/hooks/skill-activation-prompt.sh"
+      ],
+      "PostToolUse": [
+        ".claude/hooks/post-tool-use-tracker.sh"
+      ]
+    }
+  }
+}

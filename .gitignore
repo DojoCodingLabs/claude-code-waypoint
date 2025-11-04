@@ -1,0 +1,81 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+config.ini
+sentry.ini
+
+# Logs
+logs/
+*.log
+pm2-logs/
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Database
+*.sqlite
+*.db
+
+# Prisma
+.env
+prisma/.env
+
+# Claude Code Memory (may contain sensitive context)
+# IMPORTANT: Memory files may contain project-specific decisions and context
+# that you want to persist. Adjust based on your needs:
+
+# Option 1: Don't track memory at all (default for privacy)
+.claude/memory/**/*.json
+
+# Option 2: Track memory but exclude sensitive subdirectories
+# .claude/memory/plans/
+# .claude/memory/*/corrections.json
+
+# Option 3: Track all memory (use if memory contains no sensitive data)
+# (Comment out the exclusion above)
+
+# DO track skills, agents, commands (these are plugin code, not data)
+!.claude/skills/
+!.claude/agents/
+!.claude/commands/
+!.claude/hooks/
+
+# Dev docs - choose based on preference:
+# Option A: Track active dev docs (recommended for teams)
+# dev/active/
+
+# Option B: Don't track dev docs (private context)
+dev/active/**/*.md
+
+# Always ignore archived dev docs (historical)
+dev/archived/
