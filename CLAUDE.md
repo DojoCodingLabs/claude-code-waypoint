@@ -172,7 +172,7 @@ skill-name/
 ## Repository Structure
 
 ```
-dojo-claude-code-plugin-marketplace/
+claude-code-waypoint/
 ├── plugins/
 │   └── waypoint/
 │       ├── .claude-plugin/
@@ -238,8 +238,8 @@ From [README.md](README.md#quick-start):
 
 2. **Or install from marketplace**:
    ```
-   /plugin marketplace add DojoCodingLabs/dojo-claude-code-plugin-marketplace
-   /plugin install waypoint@dojo-claude-code-plugin-marketplace
+   /plugin marketplace add DojoCodingLabs/claude-code-waypoint
+   /plugin install waypoint@claude-code-waypoint
    ```
 
 3. **Restart Claude Code**

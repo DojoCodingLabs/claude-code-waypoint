@@ -137,5 +137,5 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to contribute.
 ## Support
 
 For questions, issues, or feature requests:
-- **Issues**: [GitHub Issues](https://github.com/DojoCodingLabs/dojo-claude-code-plugin-marketplace/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/DojoCodingLabs/dojo-claude-code-plugin-marketplace/discussions)
+- **Issues**: [GitHub Issues](https://github.com/DojoCodingLabs/claude-code-waypoint/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/DojoCodingLabs/claude-code-waypoint/discussions)

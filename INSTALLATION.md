@@ -25,7 +25,7 @@ This automatically copies all plugin files, creates directory structure, and con
 
 ```bash
 # Clone the repository
-git clone https://github.com/DojoCodingLabs/dojo-claude-code-plugin-marketplace
+git clone https://github.com/DojoCodingLabs/claude-code-waypoint
 
 # Or download ZIP and extract
 ```
@@ -75,7 +75,7 @@ your-project/
 
 ```bash
 # Run the installer script
-curl -fsSL https://raw.githubusercontent.com/DojoCodingLabs/dojo-claude-code-plugin-marketplace/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/DojoCodingLabs/claude-code-waypoint/main/install.sh | bash
 ```
 
 The script will:
@@ -278,9 +278,9 @@ Always Require:
 
 ## Getting Help
 
-- **Issues**: [GitHub Issues](https://github.com/DojoCodingLabs/dojo-claude-code-plugin-marketplace/issues)
+- **Issues**: [GitHub Issues](https://github.com/DojoCodingLabs/claude-code-waypoint/issues)
 - **Questions**: Ask Claude "How do I use memory management?"
-- **Community**: [Discussions](https://github.com/DojoCodingLabs/dojo-claude-code-plugin-marketplace/discussions)
+- **Community**: [Discussions](https://github.com/DojoCodingLabs/claude-code-waypoint/discussions)
 
 ---
 

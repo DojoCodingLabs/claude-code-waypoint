@@ -468,7 +468,7 @@ grep -rl "Supabase" .claude/skills/ | xargs sed -i '' 's/Supabase/Prisma/g'
 1. **Use the scaffold-customizer agent** (handles most cases)
 2. **Ask Claude**: "I need help customizing for [your stack]"
 3. **Check examples**: See [skill-developer](/.claude/skills/skill-developer/SKILL.md)
-4. **Open an issue**: [GitHub Issues](https://github.com/DojoCodingLabs/dojo-claude-code-plugin-marketplace/issues)
+4. **Open an issue**: [GitHub Issues](https://github.com/DojoCodingLabs/claude-code-waypoint/issues)
 
 ---
 

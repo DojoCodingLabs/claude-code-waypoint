@@ -32,8 +32,8 @@ Guidelines for contributing to Claude Code Waypoint Plugin. Whether you're addin
 
 ```bash
 # Clone the repository
-git clone https://github.com/DojoCodingLabs/dojo-claude-code-plugin-marketplace
-cd dojo-claude-code-plugin-marketplace
+git clone https://github.com/DojoCodingLabs/claude-code-waypoint
+cd claude-code-waypoint
 
 # Create a branch for your work
 git checkout -b feature/your-feature-name
@@ -836,7 +836,7 @@ Questions? Ask in the community. We're here to help.
 ---
 
 **Related Links**:
-- [GitHub Issues](https://github.com/DojoCodingLabs/dojo-claude-code-plugin-marketplace/issues)
-- [GitHub Discussions](https://github.com/DojoCodingLabs/dojo-claude-code-plugin-marketplace/discussions)
+- [GitHub Issues](https://github.com/DojoCodingLabs/claude-code-waypoint/issues)
+- [GitHub Discussions](https://github.com/DojoCodingLabs/claude-code-waypoint/discussions)
 - [README.md](README.md) - Project overview
 - [CLAUDE.md](CLAUDE.md) - Architecture guide

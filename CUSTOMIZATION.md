@@ -633,8 +633,8 @@ If skills don't activate:
 If you've customized Claude Code Waypoint Plugin for a popular stack (e.g., Vue + FastAPI), consider sharing:
 
 ```bash
-git clone https://github.com/DojoCodingLabs/dojo-claude-code-plugin-marketplace
-cd dojo-claude-code-plugin-marketplace
+git clone https://github.com/DojoCodingLabs/claude-code-waypoint
+cd claude-code-waypoint
 
 # Make your customizations
 # Test thoroughly
@@ -768,7 +768,7 @@ echo '{"prompt":"test"}' | npx tsx .claude/hooks/skill-activation-prompt.ts
 1. **Use the scaffold-customizer agent** (handles most cases)
 2. **Ask Claude**: "I need help customizing for [your stack]"
 3. **Check examples**: See [skill-developer](/.claude/skills/skill-developer/SKILL.md)
-4. **Open an issue**: [GitHub Issues](https://github.com/DojoCodingLabs/dojo-claude-code-plugin-marketplace/issues)
+4. **Open an issue**: [GitHub Issues](https://github.com/DojoCodingLabs/claude-code-waypoint/issues)
 
 ## Next Steps
 
