@@ -70,6 +70,89 @@ npm install && chmod +x *.sh
 
 ---
 
+## 📖 How to Use: The Waypoint Workflow
+
+### Step 1: Plan First (Think & Document)
+
+Start by having Claude help you think through requirements:
+
+```bash
+/plan Build authentication system with OAuth and JWT
+```
+
+Claude will help you:
+- Clarify requirements and edge cases
+- Identify technical decisions
+- Consider architecture options
+- Document initial approach
+
+**Key Point:** This is exploration mode. Ask questions, refine thinking, iterate.
+
+### Step 2: Create Official Waypoint (Formalize)
+
+Once requirements are clear, formalize into waypoint structure:
+
+```bash
+/create-plan auth-system
+```
+
+This creates the **3-file waypoint**:
+```
+plans/active/auth-system/
+├── auth-system-plan.md      # Strategy & architecture
+├── auth-system-context.md   # Current state & decisions
+└── auth-system-tasks.md     # Actionable checklist
+```
+
+Claude will populate these based on your planning discussion.
+
+### Step 3: Review & Approve (Your Responsibility)
+
+**This is critical:** You are the builder, you own the plan.
+
+```bash
+# Review the waypoint files
+cat plans/active/auth-system/auth-system-plan.md
+
+# Check if approach makes sense
+# Verify architecture decisions align with your goals
+# Ensure nothing critical is missing
+```
+
+**Ask yourself:**
+- Does this approach make sense for my project?
+- Are the trade-offs acceptable?
+- What could go wrong?
+
+**Approve explicitly:**
+```
+"I've reviewed the auth-system plan and approve it. Let's proceed."
+```
+
+### Step 4: Execute (Stay Context-Aware)
+
+Now implement with Claude, maintaining context throughout:
+
+```bash
+# Claude implements based on approved plan
+# Waypoint tracks progress automatically
+
+# Before long breaks or context reset risk
+/update-context
+
+# After context reset
+/resume auth-system
+# → Back in < 60 seconds with full context
+```
+
+**While executing:**
+- Update waypoint when you discover new information
+- Log decisions and why they were made
+- Track what's completed vs pending
+- Document blockers as they appear
+
+---
+
 ## 🎯 Core Features
 
 ### 1. Persistent Memory System (PRIMARY)
