@@ -1,0 +1,12 @@
+name = "Claude Code Waypoint"
+tagline = "[Persistent memory] across sessions"
+chips = ["3 commands / 6 skills"]
+meta = "Open source · Claude Code"
+tile = "/"
+
+[card]
+kind = "terminal"
+label = "Claude Code"
+status = "v2.0.0 · MIT"
+lines = [["/create-plan", "auth-implementation"], "/update-context", ["/resume", "auth-implementation"]]
+dim = "→ Back to work in < 60 seconds"
