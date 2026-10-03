@@ -1,9 +1,23 @@
+<p align="center">
+  <a href="https://dojocoding.io">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="docs/assets/banner-light.svg">
+      <img alt="Claude Code Waypoint by Dojo Coding: Persistent memory across sessions" src="docs/assets/banner-light.svg" width="100%">
+    </picture>
+  </a>
+</p>
+
 # Claude Code Waypoint
 
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Version](https://img.shields.io/badge/version-2.0.0-blue)](CHANGELOG.md)
+**A Claude Code toolkit that keeps each task's plan, context and checklist in files, for builders on long-running work.**
 
 **Never lose context again.** Strategic waypoints for persistent memory and intentional context management in Claude Code projects.
+
+[![License](https://img.shields.io/badge/license-MIT-FF7151?labelColor=201E3D)](LICENSE)
+[![Version](https://img.shields.io/badge/version-2.0.0-FF7151?labelColor=201E3D)](CHANGELOG.md)
+
+[Get started](#quick-start) · [How to use](#how-to-use-the-waypoint-workflow) · [Docs](#documentation) · [Contribute](CONTRIBUTING.md) · [Report an issue](https://github.com/DojoCodingLabs/claude-code-waypoint/issues/new)
 
 ---
 
@@ -30,7 +44,7 @@ Claude Code Waypoint creates **strategic checkpoints** throughout your project j
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -70,7 +84,7 @@ npm install && chmod +x *.sh
 
 ---
 
-## 📖 How to Use: The Waypoint Workflow
+## How to Use: The Waypoint Workflow
 
 ### Step 1: Plan First (Think & Document)
 
@@ -153,7 +167,7 @@ Now implement with Claude, maintaining context throughout:
 
 ---
 
-## 🎯 Core Features
+## Core Features
 
 ### 1. Persistent Memory System (PRIMARY)
 
@@ -232,7 +246,7 @@ Copy-and-use agents for common workflows:
 
 ---
 
-## 📚 What's Included
+## What's Included
 
 ### Core Skills (Memory & Context)
 
@@ -263,9 +277,9 @@ The **skill-developer** skill teaches you how to create custom skills with memor
 
 ---
 
-## 💡 Use Cases
+## Use Cases
 
-### 🖥️ Software Development
+### Software Development
 
 ```
 Feature: Authentication refactor
@@ -279,7 +293,7 @@ Waypoint tracks:
 Resume time: 45 seconds
 ```
 
-### 📊 Business Planning
+### Business Planning
 
 ```
 Project: Q1 strategy redesign
@@ -293,7 +307,7 @@ Waypoint tracks:
 Resume time: 30 seconds
 ```
 
-### 🔬 Research Projects
+### Research Projects
 
 ```
 Research: ML model optimization
@@ -311,7 +325,7 @@ Resume time: 60 seconds
 
 ---
 
-## 🌟 Credits & Origin
+## Credits & Origin
 
 This project packages the incredible work shared by **[diet103](https://github.com/diet103)** in their repository **[claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase)**.
 
@@ -333,7 +347,7 @@ Building on this foundation, we added our own twist and improvements:
 
 ---
 
-## 📖 Documentation
+## Documentation
 
 ### Getting Started
 - **[Installation Guide](INSTALLATION.md)** - Detailed setup instructions
@@ -352,7 +366,7 @@ Building on this foundation, we added our own twist and improvements:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
@@ -364,20 +378,17 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
-## 📄 License
-
-MIT License - See [LICENSE](LICENSE) for details.
-
----
-
-## 💬 Support
+## Support
 
 - **Issues:** [GitHub Issues](https://github.com/DojoCodingLabs/claude-code-waypoint/issues)
 - **Discussions:** [GitHub Discussions](https://github.com/DojoCodingLabs/claude-code-waypoint/discussions)
 
 ---
 
+## License
+
+MIT License - See [LICENSE](LICENSE) for details. Built by [Dojo Coding](https://dojocoding.io).
+
 <p align="center">
-  <strong>Built by Dojo Coding, for Builders.</strong><br>
-  Production-tested tools for serious Claude Code users.
+  <a href="https://dojocoding.io"><img src="docs/assets/dojocoding-mark.png" alt="Dojo Coding" width="48"></a>
 </p>
